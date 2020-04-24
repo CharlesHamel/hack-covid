@@ -73,7 +73,7 @@ export default class EThreat extends Component {
         Swal.fire({
           title: `${res.name} was added at index ${res.id}`,
           html:
-            `<p>Price: ${res.risk / 1000000} TRX (${res.risk} SUN)</p>` +
+            `<p>Risk: ${res.risk}</p>` +
             `<p>Site: ${res.site}</p>` +
             `<p>Employee: ${res.employee}</p>`,
           type: "success"
