@@ -119,7 +119,7 @@ export default class EThreat extends Component {
   }
 
   startEventListeners() {
-    Utils.contract.Purchased().watch((err, { result }) => {
+    Utils.contract.Confirmed().watch((err, { result }) => {
       if (err) return console.log("Failed to bind event listener", err);
       if (result) {
         Swal.fire({
