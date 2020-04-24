@@ -100,7 +100,7 @@ export default class EThreat extends Component {
       })
       .then(res => {
         Swal.fire({
-          title: `There are ${res.total} in this contract's store.`,
+          title: `There are ${res.total} threats for this employee.`,
           type: "success"
         });
       })
