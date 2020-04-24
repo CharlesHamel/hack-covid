@@ -97,8 +97,8 @@ export default class EThreat extends Component {
       callValue: 0
     });
 
-    let checkAvailability = await Utils.contract
-      .Availability()
+    let checkEmployee = await Utils.contract
+      .Employee()
       .watch((err, { result }) => {
         if (err) return console.log("Failed to bind event listener", err);
         if (result) {
@@ -106,7 +106,7 @@ export default class EThreat extends Component {
             title: `Employee: ${result.employee}.`,
             type: result.employee ? "success" : "error"
           });
-          checkAvailability.stop();
+          checkEmployee.stop();
         }
       });
   }
