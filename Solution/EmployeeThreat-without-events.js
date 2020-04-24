@@ -52,7 +52,7 @@ export default class EThreat extends Component {
             className="add-button"
             onClick={() => this.addThreat(threat.id, threat.risk)}
           >
-            Add
+            Add Threat
           </button>
           <button
             className="add-button"
