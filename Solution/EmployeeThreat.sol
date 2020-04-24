@@ -16,7 +16,7 @@ contract EThreat {
 
     mapping (uint => Threat) threats;
 
-    event Purchased(uint id, string name, address indexed employee, address indexed site, uint risk);
+    event Confirmed(uint id, string name, address indexed employee, address indexed site, uint risk);
     event Added(uint id, string name, uint risk, address indexed employee, bool active, bool exists);
     event Total(uint totalThreats);
     event Availability(bool active);
@@ -70,14 +70,14 @@ contract EThreat {
 
         address _siteAddress = msg.sender;
 
-        _handlePurchase(_id, _siteAddress, msg.value);
+        _handleConfirm(_id, _siteAddress, msg.value);
 
-        emit Purchased(_id, threats[_id].name, threats[_id].employee, threats[_id].site, threats[_id].risk);
+        emit Confirmed(_id, threats[_id].name, threats[_id].employee, threats[_id].site, threats[_id].risk);
 
         return (true, _id, threats[_id].name, threats[_id].employee, threats[_id].site, threats[_id].risk);
     }
 
-    function _handlePurchase(uint _id, address _siteAddress, uint _value) internal {
+    function _handleConfirm(uint _id, address _siteAddress, uint _value) internal {
         threats[_id].active = false;
         threats[_id].site = _siteAddress;
         threats[_id].employee.transfer(_value);
