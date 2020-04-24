@@ -1,0 +1,25 @@
+.eThreat-component-container {
+  margin: 30px;
+}
+
+.eThreat-component-dash {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-image {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.eThreat-item {
+  padding: 10px;
+  float: left;
+}
+
+.risk-add-container {
+  display: flex;
+  justify-content: space-between;
+}
