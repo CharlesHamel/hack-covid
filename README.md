@@ -1,9 +1,5 @@
 # Hack-Covid - Risques de menaces d'un employé sur un site
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 Contrat permettant l'ajout et la consultation des risques et menaces d'un employé pour un site sur le blockchain Tron.
 
   - Type some Markdown on the left
