@@ -22,4 +22,4 @@ Contrat permettant l'ajout et la consultation des risques et menaces d'un employ
 - Les informations inscrites le sont grâce à des expressions mnémoniques de schémas de comptes déterministes hiérarchiques (HD), où les clés privées sont dérivées de manière déterministe d'une valeur de 128 bits (mnémonique de 12 mots) comme décrit par BIP32.
 - Il est impossible d'altérée les données inscrites par un compte et l'historique n'est pas modifiable ou supprimable.
 - Un compte est le seul validateur possible d'une donnée.
-- La validité est données est vérifiable en faisant correspondre les données du compte qui les a inscrites sans toutefois révéler ces données 
+- La validité est données est vérifiable en les faisant correspondre avec le compte qui les a inscrites sans toutefois révéler ces données .
