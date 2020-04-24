@@ -43,8 +43,6 @@ class App extends Component {
           const TRONGRID_API = "https://api.trongrid.io";
 
           window.tronWeb = new TronWeb(
-            TRONGRID_API,
-            TRONGRID_API,
             TRONGRID_API
           );
 
@@ -74,9 +72,6 @@ class App extends Component {
     });
 
     if (!this.state.tronWeb.loggedIn) {
-      // Set default address (foundation address) used for contract calls
-      // Directly overwrites the address object if TronLink disabled the
-      // function call
       window.tronWeb.defaultAddress = {
         hex: window.tronWeb.address.toHex(FOUNDATION_ADDRESS),
         base58: FOUNDATION_ADDRESS
