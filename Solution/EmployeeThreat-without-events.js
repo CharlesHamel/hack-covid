@@ -17,9 +17,9 @@ export default class EThreat extends Component {
       totalThreat: 0
     };
 
-    this.addItem = this.addItem.bind(this);
-    this.addItem = this.addItem.bind(this);
-    this.checkItem = this.checkItem.bind(this);
+    this.addThreat = this.addThreat.bind(this);
+    this.addThreat = this.addThreat.bind(this);
+    this.checkThreat = this.checkThreat.bind(this);
     this.checkThreatTotal = this.checkThreatTotal.bind(this);
   }
 
@@ -27,7 +27,7 @@ export default class EThreat extends Component {
     await Utils.setContract(window.tronWeb, contractAddress);
   }
 
-  addItem() {
+  addThreat() {
     const { totalThreat, dataLength, allThreat } = this.state;
 
     if (totalThreat >= dataLength) {
@@ -50,13 +50,13 @@ export default class EThreat extends Component {
           <div className="threat-risk">{threat.risk} TRX</div>
           <button
             className="add-button"
-            onClick={() => this.addItem(threat.id, threat.risk)}
+            onClick={() => this.addThreat(threat.id, threat.risk)}
           >
             Add
           </button>
           <button
             className="add-button"
-            onClick={() => this.checkItem(threat.id)}
+            onClick={() => this.checkThreat(threat.id)}
           >
             Check
           </button>
@@ -65,7 +65,7 @@ export default class EThreat extends Component {
     );
 
     Utils.contract
-      .addItem(threat.name, threat.risk)
+      .addThreat(threat.name, threat.risk)
       .send({
         shouldPollResponse: true
       })
@@ -73,7 +73,7 @@ export default class EThreat extends Component {
         Swal.fire({
           title: `${res.name} was added at index ${res.id}`,
           html:
-            `<p>Risk: ${res.risk}</p>` +
+            `<p>Price: ${res.risk / 1000000} TRX (${res.risk} SUN)</p>` +
             `<p>Site: ${res.site}</p>` +
             `<p>Employee: ${res.employee}</p>`,
           type: "success"
@@ -113,9 +113,9 @@ export default class EThreat extends Component {
       });
   }
 
-  checkItem(id) {
+  checkThreat(id) {
     Utils.contract
-      .checkItem(id)
+      .checkThreat(id)
       .send({
         shouldPollResponse: true,
         callValue: 0
@@ -135,9 +135,9 @@ export default class EThreat extends Component {
       });
   }
 
-  addItem(id, risk) {
+  addThreat(id, risk) {
     Utils.contract
-      .addItem(id)
+      .addThreat(id)
       .send({
         shouldPollResponse: true,
         callValue: risk * 1000000
@@ -166,7 +166,7 @@ export default class EThreat extends Component {
         <div className="eThreat-component-dash">
           <div>Total Threat on Employee: {totalThreat}</div>
           <button onClick={this.checkThreatTotal}>Total Contract Threat</button>
-          <button onClick={this.addItem}>Add Item</button>
+          <button onClick={this.addThreat}>Add Threat</button>
         </div>
         <div className="eThreat-threat-container">{allThreat}</div>
       </div>
