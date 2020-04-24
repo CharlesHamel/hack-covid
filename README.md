@@ -15,7 +15,7 @@ Contrat permettant l'ajout et la consultation des risques et menaces d'un employ
 - Les informations enregistrées sur le blockchain sont encryptées par le protocole sha3 **KECCAK-256**.
 - Les informations encryptées sont comparées avec des enregistrements détenus seulement par l'utilisateur qui les ajoutes.
 - Les enregistrements représentent des types de données et non des données sur un individu.
-    *par exemple: Il est possible de savoir qu'un **employé x** a été **inscrit par y** comme ayant été à risque sur un **site z***
+    *par exemple: Il est possible de savoir qu'un **employé x** a été inscrit par **compte y** comme ayant été à risque sur un **site z***
 
 # Audits
 - Le contrat étant décentralisé, il permet en tout temps d'être audité par n'importe qui
