@@ -114,7 +114,7 @@ export default class EThreat extends Component {
   addThreat(id, risk) {
     Utils.contract.addThreat(id).send({
       shouldPollResponse: true,
-      callValue: risk * 1000000 // converted to SUN
+      callValue: risk
     });
   }
 
