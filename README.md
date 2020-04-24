@@ -18,8 +18,8 @@ Contrat permettant l'ajout et la consultation des risques et menaces d'un employ
     *par exemple: Il est possible de savoir qu'un **employé x** a été **inscrit par y** comme ayant été à risque sur un **site z***
 
 # Audits
-- Le contrat étant décentralisé, permet en tout temps d'être audité par qui que ce soit
+- Le contrat étant décentralisé, il permet en tout temps d'être audité par n'importe qui
 - Les informations inscrites le sont grâce à des expressions mnémoniques de schémas de comptes déterministes hiérarchiques (HD), où les clés privées sont dérivées de manière déterministe d'une valeur de 128 bits (mnémonique de 12 mots) comme décrit par BIP32.
-- Il est impossible d'altérée les données inscrites par un compte et l'historique n'est pas modifiable ou supprimable.
+- Il est impossible d'altérer les données inscrites par un compte et l'historique n'est pas modifiable ou supprimable.
 - Un compte est le seul validateur possible d'une donnée.
-- La validité est données est vérifiable en faisant correspondre les données du compte qui les a inscrites sans toutefois révéler ces données 
+- La validité est données est vérifiable en les faisant correspondre avec celles du compte qui les a inscrites, sans toutefois révéler ces données 
