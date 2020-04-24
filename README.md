@@ -2,10 +2,6 @@
 
 Contrat permettant l'ajout et la consultation des risques et menaces d'un employé pour un site sur le blockchain Tron.
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
 # Blockchain: TRON
 
  Le Blockchain TRON a été choisi parce que:
