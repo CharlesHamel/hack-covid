@@ -12,14 +12,14 @@ Contrat permettant l'ajout et la consultation des risques et menaces d'un employ
 
 # Confidentialité
 
-- Les informations enregistrées sur le blockchain sont encryptées par le protocole sha3 **KECCAK-256**.
-- Les informations encryptées sont comparées avec des enregistrements détenus seulement par le compte qui les ajoutes.
-- Les enregistrements représentent des types de données et non des données sur un individu.
+- Les informations enregistrées sur le blockchain sont encryptées par le protocole sha3 **KECCAK-256**
+- Les informations encryptées sont comparées avec des enregistrements détenus seulement par le compte qui les ajoutes
+- Les enregistrements représentent des types de données et non des données sur un individu
     *par exemple: Il est possible de savoir qu'un **employé x** a été inscrit par **compte y** comme ayant été à risque sur un **site z***
 
 # Audits
 - Le contrat étant décentralisé, il permet en tout temps d'être audité par n'importe qui
-- Les informations inscrites le sont grâce à des expressions mnémoniques de schémas de comptes déterministes hiérarchiques (HD), où les clés privées sont dérivées de manière déterministe d'une valeur de 128 bits (mnémonique de 12 mots) comme décrit par BIP32.
+- Les informations inscrites le sont grâce à des expressions mnémoniques de schémas de comptes déterministes hiérarchiques (HD), où les clés privées sont dérivées de manière déterministe d'une valeur de 128 bits (mnémonique de 12 mots) comme décrit par BIP32
 - Il est impossible d'altérer les données inscrites par un compte et l'historique n'est pas modifiable ou supprimable.
-- Un compte est le seul validateur possible d'une donnée.
-- La validité des données est vérifiable en les faisant correspondre avec le compte qui les a inscrites sans toutefois les révéler.
+- Un compte est le seul validateur possible d'une donnée
+- La validité des données est vérifiable en les faisant correspondre avec le compte qui les a inscrites sans toutefois les révéler
