@@ -28,7 +28,7 @@
     "react-dom": "^16.8.4",
     "react-scripts": "^2.1.8",
     "sweetalert2": "^8.5.0",
-    "tronweb": "^2.3.4"
+    "tronweb": "^6.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
